@@ -1,6 +1,6 @@
 # ADR 0001: Lightroom Classic first and nondestructive
 
-**status**: waiting — 2026-10-28
+**status**: accepted — 2026-10-28
 
 ## Context
 
