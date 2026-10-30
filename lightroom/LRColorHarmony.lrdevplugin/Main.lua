@@ -11,7 +11,7 @@ LrTasks.startAsyncTask(function()
         return
     end
 
-    local ok, result = pcall(function()
+    local ok, result = LrTasks.pcall(function()
         if LrApplicationView.getCurrentModuleName() ~= 'develop' then
             LrApplicationView.switchToModule('develop')
             LrTasks.sleep(1)
