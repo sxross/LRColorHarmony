@@ -20,7 +20,7 @@ LrTasks.startAsyncTask(function()
     end)
 
     if not ok then
-        LrDialogs.message('LRColorHarmony Slice 0', 'Probe failed. Check Lightroom plugin logs or report this error:\\n' .. tostring(result), 'critical')
+        LrDialogs.message('LRColorHarmony Slice 0', 'Probe failed. Check Lightroom plugin logs or report this error:\n' .. tostring(result), 'critical')
     else
         LrDialogs.message('LRColorHarmony Slice 0', result, 'info')
     end
