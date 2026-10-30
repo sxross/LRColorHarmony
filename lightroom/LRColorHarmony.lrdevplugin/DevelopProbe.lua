@@ -33,7 +33,7 @@ function M.run()
 
     local written = {}
     local readings = {}
-    local applyOk, applyErr = pcall(function()
+    local applyOk, applyErr = LrTasks.pcall(function()
         for _, item in ipairs(changes) do
             -- Record intent before calling setValue: the call might partially succeed.
             written[#written + 1] = item.name
@@ -48,7 +48,7 @@ function M.run()
     local restoreErrors = {}
     for i = #written, 1, -1 do
         local name = written[i]
-        local ok, err = pcall(function()
+        local ok, err = LrTasks.pcall(function()
             Develop.setValue(name, originals[name])
             local actual = read(name)
             assert(math.abs(actual - originals[name]) < 0.0001,
