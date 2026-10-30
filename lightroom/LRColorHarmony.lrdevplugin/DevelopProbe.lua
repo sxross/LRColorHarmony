@@ -73,7 +73,7 @@ function M.run()
     if #restoreErrors > 0 then
         lines[#lines + 1] = 'WARNING: Restoration could not be confirmed. Revert the test photo manually.'
     end
-    return table.concat(lines, '\\n')
+    return table.concat(lines, '\n')
 end
 
 return M
